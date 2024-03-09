@@ -52,7 +52,7 @@ const SignInScreen = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         try {
-            const response = await axios.post("http://localhost:3000/api/login", { email, password });
+            const response = await axios.post("https://advanced-e-commerce-backend.onrender.com/api/login", { email, password });
             const accessToken = response.data.token;
             localStorage.setItem("accessToken", accessToken);
             toast.success("Successfully Logged In!");

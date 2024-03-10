@@ -182,9 +182,6 @@ const Hero = () => {
                     <p className="hero-text-bottom font-semibold uppercase">
                       {banner.bottomText}
                     </p>
-                    <BaseLinkWhite to={banner.buttonLink} className="hero-btn">
-                      {banner.buttonText}
-                    </BaseLinkWhite>
                   </Container>
                 </HeroSlideContent>
               </HeroSliderItemWrapper>

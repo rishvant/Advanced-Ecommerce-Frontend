@@ -52,7 +52,7 @@ const AddressScreen = () => {
     const instruction = instructionRef.current.value;
     try {
       const token = localStorage.getItem("accessToken");
-      const response = await axios.post("https://advanced-e-commerce-backend.onrender.com/api/address", { firstName, lastName, country, company, street, city, state, phone, postal, instruction }, {
+      const response = await axios.post("https://localhost:3000/api/address", { firstName, lastName, country, company, street, city, state, phone, postal, instruction }, {
         headers: {
           Authorization: token
         }

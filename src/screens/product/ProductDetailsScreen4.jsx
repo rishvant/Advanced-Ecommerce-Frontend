@@ -4,7 +4,7 @@ import Breadcrumb from "../../components/common/Breadcrumb";
 import { product_four } from "../../data/data";
 import ProductPreview from "../../components/product/ProductPreview";
 import { Link } from "react-router-dom";
-import { BaseLinkGreen } from "../../styles/button";
+import { BaseLinkBlue, BaseLinkGreen } from "../../styles/button";
 import { currencyFormat } from "../../utils/helper";
 import { breakpoints, defaultTheme } from "../../styles/themes/default";
 import ProductSimilar from "../../components/product/ProductSimilar";
@@ -246,6 +246,11 @@ const ProductDetailsScreen4 = () => {
               </div>
             </ProductColorWrapper>
             <div className="btn-and-price flex items-center flex-wrap">
+              <span className="prod-price text-xl font-bold text-outerspace">
+                {currencyFormat(product_four.price)}
+              </span>
+            </div>
+            <div className="btn-and-price flex items-center flex-wrap">
               <BaseLinkGreen
                 to="/cart"
                 as={BaseLinkGreen}
@@ -256,9 +261,12 @@ const ProductDetailsScreen4 = () => {
                 </span>
                 <span className="prod-add-btn-text">Add to cart</span>
               </BaseLinkGreen>
-              <span className="prod-price text-xl font-bold text-outerspace">
-                {currencyFormat(product_four.price)}
-              </span>
+              <BaseLinkBlue
+                as={BaseLinkBlue}
+                className="prod-add-btn"
+              >
+                <span className="prod-add-btn-text">Try Now!</span>
+              </BaseLinkBlue>
             </div>
             <ProductServices />
           </ProductDetailsWrapper>

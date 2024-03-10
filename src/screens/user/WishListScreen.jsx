@@ -166,7 +166,7 @@ const WishListScreen = () => {
                     navigate("/sign_in");
                     toast.error("Please Log In first!");
                 }
-                const response = await axios.get("https://advanced-e-commerce-backend.onrender.com/api/profile", {
+                const response = await axios.get("https://localhost:3000/api/profile", {
                     headers: {
                         Authorization: token
                     }

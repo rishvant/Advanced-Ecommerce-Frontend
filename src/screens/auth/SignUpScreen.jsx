@@ -38,7 +38,7 @@ const SignUpScreen = () => {
         const password = passwordRef.current.value;
         e.preventDefault();        
         try {
-            const response = await axios.post("https://advanced-e-commerce-backend.onrender.com/api/register", { email, password });
+            const response = await axios.post("https://localhost:3000/api/register", { email, password });
             console.log(response);
             if (response.status === 200) {
             toast.success("Account created successfully! You can now login");

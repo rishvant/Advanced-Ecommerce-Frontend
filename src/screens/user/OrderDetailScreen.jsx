@@ -265,7 +265,7 @@ const OrderDetailScreen = () => {
           navigate("/sign_in");
           toast.error("Please Log In first!");
         }
-        const response = await axios.get("https://advanced-e-commerce-backend.onrender.com/profile", {
+        const response = await axios.get("https://localhost:3000/profile", {
           headers: {
             Authorization: token
           }

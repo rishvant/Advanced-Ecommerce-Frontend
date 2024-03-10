@@ -50,7 +50,7 @@ const OrderListScreen = () => {
           navigate("/sign_in");
           toast.error("Please Log In first!");
         }
-        const response = await axios.get("https://localhost:3000/profile", {
+        const response = await axios.get("http://localhost:3000/profile", {
           headers: {
             Authorization: token
           }
